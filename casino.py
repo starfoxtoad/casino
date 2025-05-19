@@ -25,10 +25,22 @@ def roulette():
       print("The ball landed on", color)
       if color == "Red":
         print("Congratulations! You won!")
-        exit()
+        redo = input("Would you like to play again? (y/n)")
+        if redo == "y":
+                roulette()
+        if redo == "n":
+                exit()
+        if redo != "y" or "n":
+                    exit()
       else:
         print("Sorry, you lost.")
-        exit()
+        redo = input("Would you like to play again? (y/n)")
+        if redo == "y":
+                roulette()
+        if redo == "n":
+                exit()
+        if redo != "y" or "n":
+                    exit()
         # If the users chooses to bet on Black, it will select from a list of either red or black. If it lands on red, they lose. If it lands on black, they win.
     if color == "2":
           print("You have chosen to bet on Black.")
@@ -37,10 +49,22 @@ def roulette():
           print("The ball landed on", color)
           if color == "Black":
             print("Congratulations! You won!")  
-            exit()
+            redo = input("Would you like to play again? (y/n)")
+            if redo == "y":
+                roulette()
+            if redo == "n":
+                exit()
+            if redo != "y" or "n":
+                    exit()
           else:
             print("Sorry, you lost.")
-            exit()
+            redo = input("Would you like to play again? (y/n)")
+            if redo == "y":
+                roulette()
+            if redo == "n":
+                exit()
+            if redo != "y" or "n":
+                    exit()
       # Prevents the user from selecting a color that is not available.
     elif color != "1" or "2":
       print("Invalid choice. Please try again.")
@@ -52,13 +76,24 @@ def roulette():
   spin = random.choice(list)
   if bet == spin:
     print("You win!")
-    print("That low Taper fade meme is still massive btw")
-    exit()
+    redo = input("Would you like to play again? (y/n)")
+    if redo == "y":
+       roulette()
+    if redo == "n":
+       exit()
+    if redo != "y" or "n":
+       exit()
   else:
     print("You lose!")
     print ("The wheel landed on...")
     print (spin)
-  exit()
+    redo = input("Would you like to play again? (y/n)")
+    if redo == "y":
+       roulette()
+    if redo == "n":
+       exit()
+    if redo != "y" or "n":
+       exit()
 print ("2. Blackjack.")
 def blackjack() :
   print ("Welcome to Blackjack. In this game, you need to get as close to 21 as possible without going over. You face an AI dealer, which has some tricks up his sleeve.")
